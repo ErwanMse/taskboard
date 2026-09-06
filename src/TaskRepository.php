@@ -8,13 +8,11 @@ class TaskRepository {
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    // 🔥 On renvoie aussi le tag !
     public function getAll(): array {
         $stmt = $this->db->query("SELECT id, title, status, tag FROM tasks");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // 🔥 On enregistre le tag lors de la création
     public function create(string $title, string $tag): void {
         $stmt = $this->db->prepare(
             "INSERT INTO tasks (title, tag) VALUES (:title, :tag)"
@@ -44,7 +42,6 @@ class TaskRepository {
         $stmt->execute(['title' => $title, 'id' => $id]);
     }
 
-    // 🔥 Mise à jour du tag OK
     public function updateTag(int $id, string $tag): void {
         $stmt = $this->db->prepare(
             "UPDATE tasks SET tag = :tag WHERE id = :id"
