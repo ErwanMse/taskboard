@@ -36,7 +36,6 @@
 
             --column-bg-hover: rgba(0, 0, 0, 0.02);
 
-            /* Column identity */
             --col-todo-accent: #6366f1;
             --col-todo-bg: #f5f5ff;
             --col-doing-accent: #f97316;
@@ -44,7 +43,6 @@
             --col-done-accent: #10b981;
             --col-done-bg: #f5fdf9;
 
-            /* Tag palette (color stays fixed across themes, only tint changes) */
             --tag-urgent-color: #ef4444;
             --tag-urgent-bg: #fef2f2;
             --tag-bug-color: #f97316;
@@ -105,7 +103,6 @@
             letter-spacing: -0.02em;
         }
 
-        /* 🎨 TOOLBAR — one rounded card, children laid out edge to edge */
         .toolbar {
             display: flex;
             align-items: center;
